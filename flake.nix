@@ -8,7 +8,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		flake-parts = {
-			url "github:hercules-ci/flake-parts";
+			url = "github:hercules-ci/flake-parts";
 			inputs.nixpkgs-lib.follows = "nixpkgs";
 		};
 	};
@@ -36,7 +36,7 @@
 			   };
 			in {
 			   checks = {
-			      default = nixvimLib.check.mkTestDerivationFromNixvimModule {
+			      default = nixvimLib.check.mkTestDerivationFromNvim {
 			         inherit nvim;
 				 name = "Crow's nixvim config";
 			   };
