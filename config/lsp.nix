@@ -1,6 +1,6 @@
 { pkgs, lib, config, ...}: {
 	config.plugins.lsp = {
-		enable = true
+		enable = true;
 		servers = {
 			phpactor.enable = true;
 			lua-ls.enable = true;
