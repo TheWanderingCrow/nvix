@@ -3,7 +3,7 @@
 	config.plugins.lualine = {
 		enable = true;
 		settings = {
-			options = { theme = "powerline-dark"; };
+			options = { theme = "powerline_dark"; };
 			sections = {
 				lualine_a = ["mode"];
 				lualine_b = ["branch" "diff" "diagnostics"];

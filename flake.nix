@@ -28,23 +28,24 @@
 			   system,
 			   ...
 			}: let
+			   pkgs = import inputs.nixpkgs {
+			   	config.allowUnfree = true;
+				inherit system;
+			   };
 			   nixvimLib = nixvim.lib.${system};
 			   nixvim' = nixvim.legacyPackages.${system};
-			   nvim = nixvim'.makeNixvimWithModule {
+			   nixvimModule = {
 			   	inherit pkgs;
 				module = import ./config;
 			   };
+			   nvim = nixvim'.makeNixvimWithModule nixvimModule;
 			in {
 			   checks = {
-			      default = nixvimLib.check.mkTestDerivationFromNvim {
-			         inherit nvim;
-				 name = "Crow's nixvim config";
+			      default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
 			   };
-			   
 			   packages = {
 			   	default = nvim;
 			   };
 			};
 		    };
-		};
 }
