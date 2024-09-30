@@ -8,6 +8,6 @@
 		./theme.nix
 		./vim.nix
 		./keymaps.nix
+        ./neorg.nix
 	];
-
 }
