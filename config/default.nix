@@ -9,6 +9,7 @@
 		./vim.nix
 		./keymaps.nix
         ./treesitter.nix
+        ./web-devicons.nix
         ./neorg.nix
 	];
 }
