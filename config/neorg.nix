@@ -12,6 +12,7 @@
                 config = {
                     workspaces = {
                         notes = "~/Notes/Notes";
+                        work = "~/Notes/Work";
                         auric = "~/Notes/Auric";
                         cpr = "~/Notes/CPR";
                     };
