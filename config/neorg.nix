@@ -11,9 +11,11 @@
             "core.dirman" = {
                 config = {
                     workspaces = {
-                        notes = "~/Notes";
+                        notes = "~/Notes/Notes";
+                        auric = "~/Notes/Auric";
+                        cpr = "~/Notes/CPR";
                     };
-                    default_workspace = notes;
+                    default_workspace = "notes";
                 };
             };
         };
