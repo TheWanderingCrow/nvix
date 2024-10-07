@@ -4,8 +4,7 @@
             enable = true;
             autoReloadOnWrite = true;
             openOnSetup = true;
-            openOnSetupFile = false;
-            hijackUnnamedBufferWhenOpening = true;
+            openOnSetupFile = true;
             updateFocusedFile.enable = true;
         };
 		opts.termguicolors = true;
