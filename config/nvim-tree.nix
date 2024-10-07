@@ -3,7 +3,7 @@
 		plugins.nvim-tree = {
             enable = true;
             autoReloadOnWrite = true;
-            openOnSetup = true;
+            openOnSetup = false;
             openOnSetupFile = true;
             updateFocusedFile.enable = true;
         };
