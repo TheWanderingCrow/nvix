@@ -4,7 +4,6 @@
             enable = true;
             autoReloadOnWrite = true;
             openOnSetup = true;
-            openOnSetupFile = true;
             updateFocusedFile.enable = true;
         };
 		opts.termguicolors = true;
