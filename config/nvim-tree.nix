@@ -3,8 +3,8 @@
 		plugins.nvim-tree = {
             enable = true;
             autoReloadOnWrite = true;
-            openOnSetup = false;
-            openOnSetupFile = true;
+            openOnSetup = true;
+            openOnSetupFile = false;
             updateFocusedFile.enable = true;
         };
 		opts.termguicolors = true;
