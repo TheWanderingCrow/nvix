@@ -5,6 +5,7 @@
             autoReloadOnWrite = true;
             openOnSetup = true;
             openOnSetupFile = false;
+            hijackUnnamedBufferWhenOpening = true;
             updateFocusedFile.enable = true;
         };
 		opts.termguicolors = true;
