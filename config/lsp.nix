@@ -5,6 +5,7 @@
 			phpactor.enable = true;
 			lua-ls.enable = true;
 			yamlls.enable = true;
+            nil-ls.enable = true;
 		};
 	};
 }
