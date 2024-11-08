@@ -6,6 +6,7 @@
 			lua-ls.enable = true;
 			yamlls.enable = true;
             nil-ls.enable = true;
+            dartls.enable = true;
 		};
 	};
 }
