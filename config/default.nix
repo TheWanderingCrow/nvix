@@ -1,5 +1,6 @@
 {
 	imports = [
+        ./trouble.nix
 		./better-escape.nix
 		./firenvim.nix
 		./lsp.nix
