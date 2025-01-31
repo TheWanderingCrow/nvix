@@ -12,12 +12,11 @@
     spellcheck.enable = true;
 
     options = {
-      tabstop = 4;
-      expandtab = true;
-      shiftwidth = 4;
       foldmethod = "indent";
-      autoindent = false;
-      smartindent = false;
+      tabstop = 2;
+      smartindent = true;
+      shiftwidth = 2;
+      expandtab = true;
     };
 
     # We can toggle the tree with <leader>t and jump to it with <leader>tf
