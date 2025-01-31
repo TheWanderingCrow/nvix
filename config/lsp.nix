@@ -7,6 +7,7 @@
 			yamlls.enable = true;
             nil-ls.enable = true;
             dartls.enable = true;
+            rust-analyzer.enable = true;
 		};
 	};
 }
