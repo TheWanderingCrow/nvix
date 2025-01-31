@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{
   config.vim = {
     theme = {
       enable = true;
@@ -6,7 +6,7 @@
       style = "moon";
     };
 
-    # More convinient to hit than \
+    # Easier to hit than \
     globals.mapleader = ",";
 
     spellcheck.enable = true;
@@ -61,9 +61,12 @@
     presence.neocord = {
       enable = true;
       setupOpts = {
-        editing_text = "Grindin out code";
-        browsing_text = "Grindin out code";
+        editing_text = "type type type";
+        reading_text = "pondering tomes";
+        file_explorer_text = "where da file at";
         enable_line_number = true;
+        line_number_text = "Line %s of %s";
+        workspace_text = "I use NixOS btw";
       };
     };
 
