@@ -12,7 +12,6 @@
     spellcheck.enable = true;
 
     options = {
-      foldmethod = "indent";
       tabstop = 2;
       smartindent = true;
       shiftwidth = 2;
