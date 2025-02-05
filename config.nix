@@ -1,5 +1,21 @@
 {
   config.vim = {
+    keymaps = [
+      # For use with a footswitch bound to F12
+      {
+        mode = "n";
+        key = "<F12>";
+        action = "i";
+        silent = true;
+      }
+      {
+        mode = "i";
+        key = "<F12>";
+        action = "<Esc>";
+        silent = true;
+      }
+    ];
+
     theme = {
       enable = true;
       name = "tokyonight";
