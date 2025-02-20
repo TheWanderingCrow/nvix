@@ -26,6 +26,8 @@
       theme = "powerline_dark";
     };
 
+    autopairs.nvim-autopairs.enable = true;
+
     visuals = {
       nvim-scrollbar.enable = true;
       nvim-web-devicons.enable = true;
