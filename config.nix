@@ -35,7 +35,16 @@
     };
 
     # We can toggle the tree with <leader>t and jump to it with <leader>tf
-    filetree.neo-tree.enable = true;
+    filetree.neo-tree = {
+      enable = true;
+      setupOpts = {
+        enable_cursor_hijack = true;
+        filesystem.follow_current_file = {
+          enabled = true;
+          leave_dirs_open = true;
+        };
+      };
+    };
 
     statusline.lualine = {
       enable = true;
