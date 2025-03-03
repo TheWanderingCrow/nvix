@@ -41,7 +41,7 @@
         enable_cursor_hijack = true;
         filesystem.follow_current_file = {
           enabled = true;
-          leave_dirs_open = true;
+          leave_dirs_open = false;
         };
       };
     };
