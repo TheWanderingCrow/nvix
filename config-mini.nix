@@ -9,8 +9,6 @@
     # Easier to hit than \
     globals.mapleader = ",";
 
-    spellcheck.enable = true;
-
     options = {
       tabstop = 2;
       smartindent = true;
@@ -35,15 +33,13 @@
       theme = "powerline_dark";
     };
 
+    autopairs.nvim-autopairs.enable = true;
+
     visuals = {
       nvim-scrollbar.enable = true;
       nvim-web-devicons.enable = true;
       fidget-nvim.enable = true;
       indent-blankline.enable = true;
-    };
-
-    projects = {
-      project-nvim.enable = true;
     };
 
     ui = {
@@ -74,10 +70,7 @@
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
-
       nix.enable = true;
-      markdown.enable = true;
-      bash.enable = true;
     };
   };
 }
