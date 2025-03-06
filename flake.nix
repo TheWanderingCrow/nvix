@@ -17,8 +17,16 @@
           ./config.nix
         ];
       };
+
+      neovimMiniConfigured = inputs.nvf.lib.neovimConfiguration {
+        inherit (nixpkgs.legacyPackages."x86_64-linux") pkgs;
+        modules = [
+          ./config-mini.nix
+        ];
+      };
     in {
       default = neovimConfigured.neovim;
+      mini = neovimMiniConfigured.neovim;
     };
   };
 }
