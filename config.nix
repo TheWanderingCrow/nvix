@@ -114,6 +114,19 @@
 
     formatter.conform-nvim = {
       enable = true;
+      setupOpts = {
+        formatters_by_ft = {
+          php = ["pretty-php"];
+          nix = ["alejandra"];
+          css = ["stylelint"];
+          html = ["html_beautify"];
+          lua = ["stylua"];
+        };
+        format_on_save = {
+          lsp_format = "fallback";
+          timeout_ms = 500;
+        };
+      };
     };
 
     languages = {
