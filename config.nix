@@ -112,6 +112,10 @@
       trouble.enable = true;
     };
 
+    formatter.conform-nvim = {
+      enable = true;
+    };
+
     languages = {
       enableLSP = true;
       enableFormat = true;
