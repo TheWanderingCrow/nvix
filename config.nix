@@ -137,6 +137,7 @@
 
       nix.enable = true;
       markdown.enable = true;
+      yaml.enable = true;
       bash.enable = true;
       css.enable = true;
       html.enable = true;
