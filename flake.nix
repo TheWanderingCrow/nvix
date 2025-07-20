@@ -1,5 +1,6 @@
 {
   description = "Crow's neovim configs";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvf.url = "github:notashelf/nvf";
@@ -8,25 +9,32 @@
   outputs = {
     self,
     nixpkgs,
+    nvf,
     ...
-  } @ inputs: {
-    packages."x86_64-linux" = let
-      neovimConfigured = inputs.nvf.lib.neovimConfiguration {
-        inherit (nixpkgs.legacyPackages."x86_64-linux") pkgs;
-        modules = [
-          ./config.nix
-        ];
-      };
+  } @ inputs: let
+    forAllSystems = nixpkgs.lib.genAttrs [
+      "x86_64-linux"
+      "aarch64-linux"
+    ];
+  in {
+    packages = forAllSystems (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
 
-      neovimMiniConfigured = inputs.nvf.lib.neovimConfiguration {
-        inherit (nixpkgs.legacyPackages."x86_64-linux") pkgs;
-        modules = [
-          ./config-mini.nix
-        ];
-      };
-    in {
-      default = neovimConfigured.neovim;
-      mini = neovimMiniConfigured.neovim;
-    };
+        neovimConfigured = nvf.lib.neovimConfiguration {
+          inherit pkgs;
+          modules = [./config.nix];
+        };
+
+        neovimMiniConfigured = nvf.lib.neovimConfiguration {
+          inherit pkgs;
+          modules = [./config-mini.nix];
+        };
+      in {
+        default = neovimConfigured.neovim;
+        mini = neovimMiniConfigured.neovim;
+      }
+    );
   };
 }
+
