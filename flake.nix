@@ -19,7 +19,10 @@
   in {
     packages = forAllSystems (
       system: let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
 
         neovimConfigured = nvf.lib.neovimConfiguration {
           inherit pkgs;
@@ -37,4 +40,3 @@
     );
   };
 }
-
