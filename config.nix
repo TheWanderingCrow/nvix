@@ -131,7 +131,6 @@
     };
 
     languages = {
-      enableLSP = true;
       enableFormat = true;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
@@ -150,7 +149,12 @@
         enable = true;
         crates.enable = true;
       };
-      php.enable = true;
+      php = {
+        enable = true;
+        lsp = {
+          server = "intelephense";
+        };
+      };
     };
   };
 }
