@@ -124,6 +124,7 @@
           lua = ["stylua"];
         };
         format_on_save = {
+          enable = false;
           lsp_format = "fallback";
           timeout_ms = 500;
         };
