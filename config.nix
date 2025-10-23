@@ -109,7 +109,7 @@
 
     lsp = {
       enable = true;
-      formatOnSave = true;
+      formatOnSave = false;
       trouble.enable = true;
     };
 
